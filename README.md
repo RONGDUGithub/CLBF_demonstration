@@ -1,4 +1,4 @@
-# CLBF_demonstration
+# BLF_demonstration
 
 This is the MATLAB code and dataset corresponding to our paper. To run the program, click on the files demo.m or demo_sampling.m.
 
