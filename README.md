@@ -1,9 +1,11 @@
-# LB_demonstration
+Overview
 
-This is the MATLAB code and dataset corresponding to our paper. To run the program, click on the files demo.m or demo_sampling.m.
+This code is written in MATLAB and contains two main experimental components, packaged separately in Nonsampling.zip and Sampling.zip, representing implementations without and with sampling schemes respectively.
 
-The program's output consists of two matrices: mean_result, which represents the evaluation of the means, and distribution_result, which represents the cosine distance between the estimated stream and the original stream. 
+Non-sampling Implementation
 
-For demo.m, each row corresponds to the results for different epsilon values, ranging from 0.5 to 3. Each column represents a different scheme, in the following order: naive, 1LB, FLB, CFLB, and ToPL.
+For the non-sampling version, extract Nonsampling.zip and run Main_execution_nosampling.m. The program will generate output files named in the format of Nonsampling_volume_w10.mat, where the filename indicates the data type and window size. Note that in this setting, the query size equals the window size. The results contain two variables: mean_result and distribution_result. Both variables are presented in 6x6 matrices, where each column corresponds to results for different epsilon values (ranging from 0.5 to 3) using the same method. The six methods, represented by rows, are SW-direct, IPP, APP, CAPP, BA-SW, and ToPL.
 
-For demo_sampling.m, the columns represent the following schemes: naive, sampling, FLB, CFLB, FLB-S, and CFLB-S.
+Sampling Implementation
+
+For the sampling version, extract Sampling.zip and run Main_execution_sampling.m. The program will generate output files named in the format of Crowd_volume_w20_q20.mat, where the filename indicates the data type, window size, and query size. Similar to the non-sampling version, the results contain mean_result and distribution_result variables in 6x6 matrices. Each column represents results for different epsilon values (0.5 to 3) using the same method. The six methods, represented by rows, are SW-direct, APP, CAPP, Sampling, APP-S and CAPP-S.
